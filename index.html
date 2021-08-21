@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pomodoro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/722247e686.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="main-wrapper">
+        <h1 class="top-header"> Pomodoro timer </h1>
+        <h3 class="session"> session 1</h3>
+        <div class="top-buttons-wrapper">
+            <button class="button start-button"> start </button>
+            <button class="button pause-button"> pause </button>
+            <button class="button reset-button"> reset</button>
+        </div>
+        <div class="circular">
+            <div class="inner"></div>
+            <div class="outer"></div>
+            <div class="numb">
+                25 min
+            </div>
+            <div class="circle">
+                <div class="bar left">
+                    <div class="progress left-progress"></div>
+                </div>
+                <div class="bar right">
+                    <div class="progress right-progress"></div>
+                </div>
+            </div>
+        </div>
+        <!-- the animation is a test-->
+
+        <div class="time-choice-wrapper">
+            <div class="work-time">
+                <button class="work-up-button set-buttons"> <i class="fas fa-angle-up fa-3x icon"></i>
+                </button>
+                <div class="work">
+                    25
+                </div>
+                <button class="work-down-button set-buttons">  <i class="fas fa-angle-down fa-3x icon "></i>
+
+                </button>
+            </div>
+            <div class="brake-time">
+                <button class="brake-up-button set-buttons"> <i class="fas fa-angle-up fa-3x icon "></i> </button>
+                <div class="brake">
+                    5
+                </div>
+                <button class="brake-down-button set-buttons">  <i class="fas fa-angle-down fa-3x icon"></i> </button>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p> made by rabihak &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; https://github.com/rabihak </p>
+
+</footer>
+
+</html>
