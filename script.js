@@ -81,6 +81,7 @@ const playSound = (e) => {
     var audio = new Audio(e);
     audio.play();
 }
+
 startButton.addEventListener('click', () => {
     playSound("button-37a.mp3");
     let counter = numb.textContent;
@@ -94,36 +95,41 @@ startButton.addEventListener('click', () => {
         if (co == 0) {
             playSound("button-42.mp3");
             removeAnimation();
-            clearInterval();
+            clearInterval(i);
 
             //brake part
             showAnimation()
             let counter = brakeTime.textContent;
-            let co = parseInt(counter);
-            updateTitle(co)
+            let co1 = parseInt(counter);
+            updateTitle(co1)
             numb.textContent = brakeTime.textContent + " min";
             updateAnimationColor("#4eb944");
             i = setInterval(() => {
-                if (co == 0) {
-                    playSound("button-42.mp3");
+                if (co1 == 0) {
+                        playSound("button-42.mp3");
                     removeAnimation()
-
-                    clearInterval();
+                    playSound("button-16.mp3");
+                    displayIcons();
+                    removeAnimation()
+                    clearInterval(i);
+                    let counter1 = workTime.textContent;
+                    numb.textContent = workTime.textContent + "min"
+                    clearInterval(i);
                 } else {
-                    co--;
-                    numb.textContent = co + " min";
-                    updateTitle(co)
+                    co1--;
+                    numb.textContent = co1 + " min";
+                    updateTitle(co1)
                 }
-            }, 60000);
-            i();
+            },60000);            
             //brake end
+            return;
         } else {
             co--;
             numb.textContent = co + " min";
             updateTitle(co)
         }
-
-    }, 60000);
+        
+    },60000);
     pauseButton.addEventListener('click', () => {
         playSound("button-16.mp3");
         displayIcons();
